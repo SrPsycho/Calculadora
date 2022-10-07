@@ -1,0 +1,134 @@
+body{
+    border-radius: 50px;
+    background: rgb(43, 41, 41);
+    color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.tituloPrinc{
+    margin-top: 15px;
+    text-align: center;
+    height: 50px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.rectangulo{
+    width: 400px; 
+    height: 700px;
+     /* Esto tengo que cambiarlo para ser responsive */
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.34);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.9px);
+    -webkit-backdrop-filter: blur(8.9px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    /* From https://css.glass */
+}
+
+input{
+    cursor: pointer;
+    background-color: rgba(75, 74, 74, 0.397);
+    border: none;
+    border-radius: 15px;
+    font-size: 2rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: 10px;
+}
+input:hover{
+    transform: scale(1.2);
+    border:2px solid rgb(255, 255, 255);
+    transition-duration: 500ms;
+}
+input:active{
+    transform: translate(-1px);
+    transition-duration: 500ms;
+    filter: grayscale();
+}
+
+#historial{
+    background-color: rgba(195, 198, 201, 0.466);
+    border-radius: 0px 0px 24px 24px;
+    width: 100%;
+    color: #fff;
+    font-size: 3rem;
+    text-align: end;
+    resize: none;
+    padding: 10px 20px;
+    border: none;
+}
+#prueba{
+    background-color: rgba(195, 198, 201, 0.466);
+    width: 100%;
+    border-radius: 24px 24px 0px 0px;
+    color: rgba(255, 255, 255, 0.671);
+    font-size: 1rem;
+    text-align: end;
+    resize: none;
+    padding: 10px 20px;
+    border: none;
+}
+
+/* Botones */
+.especial1{
+    color: rgb(201, 17, 17);
+    
+}
+.especial2{
+    color: lightgreen;
+}
+.num{
+    color: aqua;
+}
+/* sectores */
+.numeros{
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Altura de los btns */
+}
+
+.sector1,.sector2,.sector3,.sector4,.sector5{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+@media (max-width:400px){
+    .rectangulo{
+        width: 300px;
+        height: 500px;
+    }
+    .tituloPrinc{
+        text-align: center;
+        height: 20px;
+    }
+    input{
+        height: 4rem;
+        width: 4rem;
+        padding: 2px;
+    }
+    .numeros{
+        gap: 10px;
+    }
+}

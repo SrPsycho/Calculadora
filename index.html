@@ -1,0 +1,73 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/fontawesome-free-6.2.0-web/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora NUCBA</title>
+</head>
+<body>
+    <header>
+        <h1 class="tituloPrinc">Calculadora</h1>
+    </header>
+    <main>
+        <div class="rectangulo">
+            <div class="resultado">
+                <textarea name="prueba" id="prueba" cols="13" rows="1" disabled></textarea>
+                <textarea name="historial" id="historial" cols="13" rows="3" disabled></textarea>
+            </div>
+     
+    
+         
+           
+                <div class="numeros">
+                    <div class="sector1">
+                        <input type="button" value="AC" class="especial1" id="AC"><!-- Esto borra todo -->
+                        <input type="button" value="√" class="especial1" id="raiz"> 
+                        <input type="button" value="%" class="especial1" id="resto"> <!-- Resto -->
+                        <input type="button" value="+" class="especial2" id="mas">
+                    </div>
+                    <!-- Numeros-->
+                    <div class="sector2">
+                        <input type="button" value="7" id="num7" class="num">
+                        <input type="button" value="8" id="num8" class="num">
+                        <input type="button" value="9" id="num9" class="num">
+                        <input type="button" value="-" class="especial2" id="menos">
+                    </div>
+                    
+                   <div class="sector3">
+                        <input type="button" value="4" id="num4" class="num">
+                        <input type="button" value="5" id="num5" class="num">
+                        <input type="button" value="6" id="num6" class="num">
+                        <input type="button" value="÷" class="especial2" id="dividir"> <!-- Dividido -->
+                   </div>
+                    
+                    <div class="sector4">
+                        <input type="button" value="1" id="num1" class="num">
+                        <input type="button" value="2" id="num2" class="num">
+                        <input type="button" value="3" id="num3" class="num">
+                        <input type="button" value="x" class="especial2" id="multiplicar">
+                    </div>
+                    
+                    <!-- Botones especiales -->
+                    <div class="sector5">
+                        <input type="button" value="C" id="C" class="especial1">
+                        <input type="button" value="0" id="num0" class="num">
+                        <input type="button" value="." id="." class="num">
+                        <input type="button" value="=" class="especial2" id="igual"> <!-- El mas importante (? -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy Matias Hausen - 2022
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
