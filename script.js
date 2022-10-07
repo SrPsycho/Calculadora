@@ -104,7 +104,7 @@ raiz.onclick = function(e){
     num1= historial.textContent;
     operacion='√';
     pruebas.textContent=num1+' '+operacion;
-    limpiar();
+    resolver();
 }
 igual.onclick = function(e){
     num2=historial.textContent;
@@ -150,16 +150,31 @@ function resolver(){
         case '√':
             res= Math.sqrt(num1);
             break;
-    }
-    pruebas.textContent = (num1+operacion+num2+"= ")
+    };
     resetear();
     historial.textContent = res;
+}
+var icono=document.getElementById("icon");
+//Modo nocturno y el otro feo xd
+var  contador=0;
+function cambiar(){
     
+    if(contador==0){
+        document.getElementById("body").style.background= "white"
+        document.getElementById("body").style.color= "black";
+        document.getElementById("prueba").style.color= "black";
+        document.getElementById("historial").style.color= "black";
+        icono.style.color="black"
+        icono.className="fa-solid fa-moon";
+        contador++;
+    }else{
+        document.getElementById("body").style.background= "rgb(43, 41, 41)"
+        document.getElementById("body").style.color= "aliceblue";
+        document.getElementById("prueba").style.color= "#fff";
+        document.getElementById("historial").style.color= "#fff";
+        icono.style.color="yellow"
+        icono.className="fa-solid fa-sun";
+        contador--;
+    }
 }
 
-/*esto va al final
-function resultadoFinal(valor){
-    document.getElementById('final').innerHTML=valor;
-
-}
-*/
